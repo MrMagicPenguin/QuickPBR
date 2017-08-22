@@ -73,13 +73,6 @@ def distribute():
     nodes = bpy.data.materials['Material'].node_tree.nodes
     nodeValues = nodes.values()
     nodeKeys = nodes.keys()
-    # I don't want to node lists such as atomicNodes and imageTextures in order to cycle through. I don't want to hardcode things.
-    #Using the list comprehension shown above as the argument above, you are returned strings
-    #the for loop throws a type error, stating:
-    # "invalid key, must be a string or int"
-    # not ShaderNodeTexImage
-    # So it seems to be returning a dictionary, not a list. How can we format a dictionary to return what we want? We just want the 'Value' of the set,
-    #I don't know how much we care for the key, in our output anyway.
     atomicNodes = nodeKeys
     imageTextures = ['Image Texture', 'Image Texture.001', 'Image Texture.002']
     

@@ -8,9 +8,9 @@ nt = mat.node_tree
 nodes = nt.nodes
 links = nt.links
 
-image_path = "C:\\Users\\lori-laptop\\Desktop\\PBR\\PBRTest Folder\\example_Col1.png"
-image_path2 = "C:\\Users\\lori-laptop\\Desktop\\PBR\\PBRTest Folder\\example_nrm.png"
-image_path3 = "C:\\Users\\lori-laptop\\Desktop\\PBR\\PBRTest Folder\\example_spec.png"
+image_path = "//PBR//PBRTest Folder//example_Col1.png"
+image_path2 = "//PBR//PBRTest Folder//example_nrm.png"
+image_path3 = "//PBR//PBRTest Folder//example_spec.png"
 
 
 #clear all nodes
@@ -127,11 +127,12 @@ class main():
     
 class QuickLayout(bpy.types.Operator):
     """Tooltip"""
-    bl_idname = "rug.quick_layout"
+    bl_idname = "myops.quick_layout"
     bl_label = "Quick PBR Layout"
 
     def execute(self, context):
-        main()       
+        main()
+        self.report({'INFO'}, "Layout Complete!")       
         return {'FINISHED'}
 
 
@@ -147,4 +148,4 @@ if __name__ == "__main__":
     register()
 
     # test call
-    bpy.ops.rug.quick_layout()
+    #bpy.ops.myops.quick_layout()

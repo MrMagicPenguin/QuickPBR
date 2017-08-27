@@ -8,9 +8,9 @@ nt = mat.node_tree
 nodes = nt.nodes
 links = nt.links
 
-image_path = "C:\\Users\\Noah\\Desktop\\MultiMedia\\Blender\\Scripts\\QuickPBR Assets\\PBRTest Folder\\example_Col1.png"
-image_path2 = "C:\\Users\\Noah\\Desktop\\MultiMedia\\Blender\\Scripts\\QuickPBR Assets\\PBRTest Folder\\example_nrm.png"
-image_path3 = "C:\\Users\\Noah\\Desktop\\MultiMedia\\Blender\\Scripts\\QuickPBR Assets\\PBRTest Folder\\example_spec.png"
+image_path = "C:\\Users\\lori-laptop\\Desktop\\PBR\\PBRTest Folder\\example_Col1.png"
+image_path2 = "C:\\Users\\lori-laptop\\Desktop\\PBR\\PBRTest Folder\\example_nrm.png"
+image_path3 = "C:\\Users\\lori-laptop\\Desktop\\PBR\\PBRTest Folder\\example_spec.png"
 
 
 #clear all nodes
@@ -118,15 +118,12 @@ def setLocation():
 class main():  
     # Create nodes
     createNodes()
-    print("Creating Nodes!")
         
     # Sort node names
     sortNodeNames()
-    print("Sorting Node Names!!")
     
     # Set node location
     setLocation()
-    print("Setting Nodes!")
     
 class QuickLayout(bpy.types.Operator):
     """Tooltip"""
@@ -150,4 +147,4 @@ if __name__ == "__main__":
     register()
 
     # test call
-    #bpy.ops.object.simple_operator()
+    bpy.ops.rug.quick_layout()
